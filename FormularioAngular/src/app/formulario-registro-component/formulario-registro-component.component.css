@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+.example-section {
+  margin: 12px 0;
+}
+
+.example-container-enviar {
+  text-align: center;
+}
+.example-contenedor {
+  margin: 0 auto;
+}
+.example-container {
+  text-align: center;
+}

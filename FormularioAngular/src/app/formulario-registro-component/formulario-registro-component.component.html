@@ -1,0 +1,89 @@
+<div class="example-contenedor">
+  <fieldset>
+    <legend><h2>Registrarse</h2></legend>
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Daniel" [(ngModel)]="inputName" required />
+      </mat-form-field>
+    </div>
+
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Apellidos</mat-label>
+        <input
+          [(ngModel)]="inputApellidos"
+          matInput
+          placeholder="Bustamante"
+          required
+        />
+      </mat-form-field>
+    </div>
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>NIF</mat-label>
+        <input [(ngModel)]="inputNif" matInput placeholder="..." required />
+      </mat-form-field>
+    </div>
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          [(ngModel)]="inputEmail"
+          matInput
+          placeholder="miguelCampos@gmail.com"
+          required
+        />
+      </mat-form-field>
+    </div>
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Teléfono</mat-label>
+        <input
+          [(ngModel)]="inputTelefono"
+          matInput
+          placeholder="609835698"
+          required
+        />
+      </mat-form-field>
+    </div>
+    <div class="example-container">
+      <mat-label>Sexo</mat-label>
+      <div>
+        <mat-radio-group aria-label="Seleccionar una opcion" [(ngModel)]="sexo">
+          <mat-radio-button value="Masculino">M</mat-radio-button>
+          <mat-radio-button value="Femenino">F</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Cómo conoció la página</mat-label>
+          <mat-select [(value)]="selected">
+            <mat-option value="Buscando en Google">Buscando en Google</mat-option>
+            <mat-option value="A través de un amigo">A través de un amigo</mat-option>
+            <mat-option value="Por mi profesor">Por mi profesor</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <section class="example-section">
+          <mat-checkbox class="example-margin" [(ngModel)]="disabled"
+            >Aceptar términos y Condiciones</mat-checkbox
+          >
+        </section>
+      </div>
+      <div class="example-container">
+        <button
+          class="example-margin"
+          [disabled]="!disabled"
+          mat-raised-button
+          color="accent"
+          (click)="enviarDatos()"
+        >
+          Registrarse
+        </button>
+      </div>
+    </div>
+  </fieldset>
+</div>
