@@ -1,26 +1,30 @@
-<div>
-  <fieldset>
-    <legend><h3>Client Login</h3></legend>
-    <div class="example-container">
-      <mat-form-field appearance="fill">
-        <mat-label>Username</mat-label>
-        <input matInput placeholder="maylor01" required />
-      </mat-form-field>
-    </div>
+<fieldset>
+  <legend><h3>Client Login</h3></legend>
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="maylor01" required />
+    </mat-form-field>
+  </div>
 
-    <div class="example-container">
-      <mat-form-field appearance="fill">
-        <mat-label>Contraseña</mat-label>
-        <div [ngClass]="flex">
-          <input matInput [type]="hide ? 'password' : 'text'" required />
-          <mat-icon
-            (click)="showPassword()"
-            [ngClass]="iconRigth"
-            aria-label="Mode"
-            >{{ icon }}</mat-icon
-          >
-        </div>
-      </mat-form-field>
-    </div>
-  </fieldset>
-</div>
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <div [ngClass]="flex">
+        <input matInput [type]="hide ? 'password' : 'text'" required />
+        <mat-icon
+          (click)="showPassword()"
+          [ngClass]="iconRigth"
+          aria-label="Mode"
+          >{{ icon }}</mat-icon
+        >
+      </div>
+    </mat-form-field>
+    <section class="example-section">
+      <mat-checkbox class="example-margin" [(ngModel)]="disabled"
+        >Aceptar término y condiciones</mat-checkbox
+      >
+    </section>
+    <button mat-raised-button [disabled]="!disabled">Registrarse</button>
+  </div>
+</fieldset>
