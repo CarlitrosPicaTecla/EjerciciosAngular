@@ -4,19 +4,26 @@
       <mat-toolbar-row>
         <span>My App</span>
         <span class="example-spacer"></span>
-        <button
-          mat-icon-button
-          class="example-icon"
-          aria-label="Example icon-button with menu icon"
-        >
-          <mat-icon>expand_more</mat-icon>
-        </button>
+
+        <mat-icon (click)="visibilityOf()">expand_more</mat-icon>
       </mat-toolbar-row>
     </mat-toolbar>
   </p>
 </header>
-<body [ngStyle]="{ 'background-color': 'green' }">
-
-
-
+<body [ngStyle]="{ 'background-color': 'white' }">
+  <div
+    [ngStyle]="{ display: 'flex', 'background-color': 'green' }"
+    *ngIf="hiden"
+  >
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi quasi
+      necessitatibus itaque deleniti molestiae amet consectetur! Ab, assumenda
+      cupiditate nostrum unde minus facere eius incidunt quas et ipsa iure! Ut.
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt,
+      facere! Id, nisi? Consequatur, molestiae consequuntur voluptatibus,
+      accusamus distinctio veritatis tenetur rerum corrupti ipsam quae
+      necessitatibus nobis consectetur quisquam molestias ducimus!
+    </p>
+    <mat-icon [ngStyle]="{ color: 'white' }">expand_less</mat-icon>
+  </div>
 </body>

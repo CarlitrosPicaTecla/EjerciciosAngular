@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class IndexComponent implements OnInit {
 
   constructor() { }
+  hiden = false;
+
+  visibilityOf(){
+    this.hiden = !this.hiden;
+  }
 
   ngOnInit(): void {
   }
