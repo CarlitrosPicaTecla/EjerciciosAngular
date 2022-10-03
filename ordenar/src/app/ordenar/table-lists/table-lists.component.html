@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Nombre</th>
+    <th>Apellidos</th>
+    <th>Edad</th>
+    <th>Sexo</th>
+    <th [ngStyle]="{ color: 'red' }">*</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of dataSource">
+      <td>{{ item.id }}</td>
+      <td>{{ item.nombre }}</td>
+      <td>{{ item.apellidos }}</td>
+      <td>{{ item.edad }}</td>
+      <td>
+        <mat-icon>{{ item.sexo ? "boy" : "girl" }}</mat-icon>
+      </td>
+      <td *ngIf="item.edad < 18">Es menor de edad, cuidado!</td>
+    </tr>
+  </tbody>
+</table>
