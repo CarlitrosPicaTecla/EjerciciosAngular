@@ -1,0 +1,27 @@
+<div>
+  <table
+    [ngStyle]="{
+      'background-color': 'green',
+      width: '80%',
+      margin: '0 auto',
+      'border-style': 'solid',
+      'border-with': '5px'
+    }"
+  >
+    <thead>
+      <tr>
+        <th [ngStyle]="{ color: 'blrack' }">Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let item of profesores"
+        [ngStyle]="{ 'text-align': 'center', color: 'white' }"
+      >
+        <td>{{ item.nombre }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+</div>
