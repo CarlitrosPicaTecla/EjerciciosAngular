@@ -11,6 +11,9 @@
     <thead>
       <tr>
         <th [ngStyle]="{ color: 'blrack' }">Nombre</th>
+        <th [ngStyle]="{ color: 'blrack' }">Apellidos</th>
+        <th [ngStyle]="{ color: 'blrack' }">Sexo</th>
+        <th [ngStyle]="{ color: 'blrack' }">*</th>
       </tr>
     </thead>
     <tbody>
@@ -19,9 +22,14 @@
         [ngStyle]="{ 'text-align': 'center', color: 'white' }"
       >
         <td>{{ item.nombre }}</td>
+        <td>{{ item.apellidos }}</td>
+        <td>
+          <mat-icon>{{ item.sexo ? "man" : "girl" }}</mat-icon>
+        </td>
+        <td>
+          {{ item.edad < 18 ? "Es menor de edad, cuidado!" : "" }}
+        </td>
       </tr>
     </tbody>
   </table>
-
-  
 </div>
