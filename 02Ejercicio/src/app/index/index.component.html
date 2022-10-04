@@ -5,7 +5,9 @@
         <span>My App</span>
         <span class="example-spacer"></span>
 
-        <mat-icon (click)="visibilityOf()">expand_more</mat-icon>
+        <mat-icon (click)="visibilityOf()">{{
+          hiden ? "expand_more" : "expand_less"
+        }}</mat-icon>
       </mat-toolbar-row>
     </mat-toolbar>
   </p>
@@ -24,6 +26,5 @@
       accusamus distinctio veritatis tenetur rerum corrupti ipsam quae
       necessitatibus nobis consectetur quisquam molestias ducimus!
     </p>
-    <mat-icon [ngStyle]="{ color: 'white' }">expand_less</mat-icon>
   </div>
 </body>

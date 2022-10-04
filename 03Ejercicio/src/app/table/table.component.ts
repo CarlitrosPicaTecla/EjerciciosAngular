@@ -53,8 +53,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./table.component.css'],
 })
 export class TableComponent implements OnInit {
-  disabled = false;
-
   constructor() {}
   displayedColumns: string[] = [
     'id',
@@ -68,6 +66,7 @@ export class TableComponent implements OnInit {
   columnsToDisplay: string[] = this.displayedColumns.slice();
 
   dataSource = ELEMENT_DATA;
+
   @ViewChild(MatTable) table!: MatTable<PeriodicElement>;
 
   borrarFila(id: number) {
@@ -82,11 +81,6 @@ export class TableComponent implements OnInit {
       //de momento no hace nada el metodo
     }
   }
-
-  mostrarColumna(){
-    this.disabled = !this.disabled;
-  }
-
 
   ngOnInit(): void {}
 }

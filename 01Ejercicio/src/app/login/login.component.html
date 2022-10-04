@@ -12,12 +12,9 @@
       <mat-label>Contraseña</mat-label>
       <div [ngClass]="flex">
         <input matInput [type]="hide ? 'password' : 'text'" required />
-        <mat-icon
-          (click)="showPassword()"
-          [ngClass]="iconRigth"
-          aria-label="Mode"
-          >{{ icon }}</mat-icon
-        >
+        <mat-icon (click)="showPassword()" [ngClass]="iconRigth">{{
+          icon
+        }}</mat-icon>
       </div>
     </mat-form-field>
     <section class="example-section">
